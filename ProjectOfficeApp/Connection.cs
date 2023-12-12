@@ -11,7 +11,7 @@ namespace ProjectOfficeApp
     {
         public static HttpClient Client {  get; set; } = new HttpClient
         { 
-            BaseAddress = new Uri("http://localhost:5038")
+            BaseAddress = new Uri("https://localhost:7102")
         };
     }
 }

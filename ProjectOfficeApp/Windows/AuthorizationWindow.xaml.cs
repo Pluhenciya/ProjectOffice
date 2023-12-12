@@ -30,13 +30,23 @@ namespace ProjectOfficeApp.Windows
         {
             var login = loginTextBox.Text;
             var password = passwordBox.Password;
-            if (login.Length < 1 && password.Length < 1)
+            if (login.Length < 1 || password.Length < 1)
             {
                 errorTextBlock.Text = "* Все поля должны быть заполнены";
                 return;
             }
 
+            try { 
             var user = await Connection.Client.GetFromJsonAsync<User>($"/user/{login}/{password}");
+            }
+            catch{ 
+                errorTextBlock.Text = "* Неверный логин или пароль";
+                return;
+            }
+
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
         }
     }
 }
