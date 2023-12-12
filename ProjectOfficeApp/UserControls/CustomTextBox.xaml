@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="ProjectOfficeApp.UserControls.CustomTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjectOfficeApp.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="200">
+    <Grid>
+        <TextBlock x:Name="placeholderTextBlock" Text="{Binding Placeholder}" Foreground="Gray" FontSize="15"/>
+        <TextBox x:Name="textBox" Text="{Binding Text}" Background="Transparent" BorderThickness="0,0,0,2" TextChanged="TextBox_TextChanged" FontSize="15"/>
+    </Grid>
+</UserControl>

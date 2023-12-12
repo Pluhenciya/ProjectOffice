@@ -1,0 +1,20 @@
+﻿<Window x:Class="ProjectOfficeApp.Windows.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectOfficeApp.Windows"
+        xmlns:uc="clr-namespace:ProjectOfficeApp.UserControls"
+        mc:Ignorable="d"
+        Title="Вход" Height="400" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Style="{StaticResource windowStyle}">
+
+    <Border Style="{StaticResource backgroundStyle}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Проектный офис" Style="{StaticResource headerStyle}"/>
+            <uc:CustomTextBox x:Name="loginTextBox" Placeholder="Логин..." Style="{StaticResource textBoxStyle}"/>
+            <uc:CustomPasswordBox x:Name="passwordBox" Style="{StaticResource textBoxStyle}"/>
+            <TextBlock x:Name="errorTextBlock" Style="{StaticResource errorTextBlockStyle}"/>
+            <Button Content="Войти" HorizontalAlignment="Center" Margin="10" Click="EnterButton_Click" IsDefault="True"/>
+        </StackPanel>
+    </Border>
+</Window>
